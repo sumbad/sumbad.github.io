@@ -17,7 +17,7 @@ let helper = {
     node_modules: path.join(__dirname, '../node_modules'),
     build: path.join(__dirname, '../build'),
     publicPath: '',
-    outputPath: process.env.NODE_ENV === 'production' ? 'public/' : ''
+    outputPath: ''//process.env.NODE_ENV === 'production' ? 'public/' : ''
   },
   TARGET: process.env.npm_lifecycle_event
 }
