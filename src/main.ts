@@ -10,18 +10,18 @@
 
 
 import Vue from 'vue';
-import App from './App.vue';
+import Page from './Page.vue';
 
 
 // mount
 var root = new Vue({
-  el: '#app',
-  render: h => h(App, {
+  el: '#page',
+  render: h => h(Page, {
     props: { propMessage: 'World' }
   })
 });
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  root.$mount('#app')
+  root.$mount('#page')
 })

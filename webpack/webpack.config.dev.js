@@ -13,6 +13,7 @@ module.exports = function (helper) {
 
     devServer: {
       historyApiFallback: true,
+      port: 3000,
       // stats: 'minimal',
       // outputPath: helper.PATHS.build,
       noInfo: true

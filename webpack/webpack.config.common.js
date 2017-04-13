@@ -11,7 +11,7 @@ module.exports = function (helper) {
     output: {
       path: helper.PATHS.build,
       publicPath: '/',
-      filename: 'public/js/[name].js'
+      filename: 'js/[name].js'
     },
     module: {
       rules: [
