@@ -5,76 +5,48 @@
             Использование Vue.js для создания пользовательских Web компонентов
           </h2>
 
-          <p class="lead">Web компоненты позволяют определять новые HTML теги, которые принято называть пользовательскими элементами (custom elements).
+          <p class="lead">
+            <strong>Web компоненты позволяют определять новые HTML теги,</strong> которые принято называть пользовательскими элементами (custom elements).
             Эти теги могут быть в дальнейшем использованы непосредственно в HTML коде вашего приложения подобно этому:
           </p>
-          <div id="s" ref="s"></div>              
           <!--<div v-html="`<iframe src='gists/84cb537ad664af6a299329c9c97960c3.html'></iframe>`"></div>        -->
-          <iframe id="iframe" scrolling="no" style="width:100%" ref="iframe"></iframe>
+          <!--<iframe id="iframe" scrolling="no" style="width:100%" ref="iframe"></iframe>-->
+          <Gist iframeId="84cb537ad664af6a299329c9c97960c3"/>
 
-          <p>Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor sunt sint sit nisi est eu
-            exercitation incididunt adipisicing veniam velit id fugiat enim mollit amet anim veniam dolor dolor irure velit
-            commodo cillum sit nulla ullamco magna amet magna cupidatat qui labore cillum sit in tempor veniam consequat
-            non laborum adipisicing aliqua ea nisi sint ut quis proident ullamco ut dolore culpa occaecat ut laboris in sit
-            minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat in adipisicing in amet Ut nulla nisi
-            non ut enim aliqua laborum mollit quis nostrud sed sed.</p>
+          <p class="lead">В этом примере, <span v-text="`<share-buttons/>`"></span> будет интерпретирован браузером и "заменен" HTML разметкой, которую вы для 
+          него определили. В результате получим:</p>
+          <Gist iframeId="e9ea19cb422c98942137e9e3db39c426"/>
+          <!--<iframe id="iframe" scrolling="no" style="width:100%" ref="iframe"></iframe>-->
 
-          <p>Lorem ipsum Nisi enim est proident est magna occaecat dolore proident eu ex sunt consectetur consectetur dolore
-            enim nisi exercitation adipisicing magna culpa commodo deserunt ut do Ut occaecat. Lorem ipsum Veniam consequat
-            quis aliquip dolore minim ex labore dolor Excepteur Duis velit in officia Excepteur officia officia officia cillum
-            ut elit in fugiat incididunt ea ad Ut ut ea ea dolor ex dolor eu magna voluptate irure consectetur.</p>
+          <p class="lead">Так же здесь можно было бы использовать JS логику для того, чтобы при событии click 
+            делиться данной страницей через Facebook или Twitter.
+          </p>
 
-          <div class="row">
+          <p class="lead">
+            <strong>Web компоненты подобны Vue.js компонентам.</strong> Они имеют жизненный цикл (lifecycle), свойства и могут быть вложенными.
+            Их API менее мощный, но зато следует стандарту определенному в 
+            <a href="https://www.w3.org/standards/techs/components#w3c_all">W3C спецификации</a>.
+          </p>
 
-            <div class="six columns left">
+          <p class="lead">
+            <strong>Проблема. Web компоненты не имеют полной поддержки в браузерах до настоящего момента.</strong>
+            Посмотреть поддержку Web компонентов браузерами можно на сайте 
+            <a href="http://jonrimmer.github.io/are-we-componentized-yet/">are-we-componentized-yet</a> 
+            или <a href="http://caniuse.com/#search=web%20components">caniuse.com</a>.
+          </p>
 
-              <h5>Our Process.</h5>
+          <p class="lead">
+            Но, применив немного JS магии <strong>вы можете прямо сейчас перевести ваш Vue.js компонент в Web компоненты, </strong>
+            что позволит использовать его в любых web приложениях, даже вместе с React, Angular или <имя-вашего-любимого-framework>.
+          </p>
 
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-              </p>
+          <h3>Как получить из вашего Vue.js компонента универсальные Web компоненты</h3>
 
-            </div>
-
-            <div class="six columns right">
-
-              <h5>Our Approach.</h5>
-
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-              </p>
-
-            </div>
-
-          </div>
-
-          <div class="row">
-
-            <div class="six columns left">
-
-              <h5>Our Goal.</h5>
-
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-              </p>
-
-            </div>
-
-            <div class="six columns right">
-
-              <h5>Our Mission.</h5>
-
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-              </p>
-
-            </div>
-
-          </div>
+          <p class="lead">
+            Понадобиться <a href="https://karol-f.github.io/vue-custom-element">vue-custom-element</a>
+            библиотека написанная <a href="https://github.com/karol-f">@karol-f</a>. Она позволит вам 
+            <strong>использовать Vue.js компонент как пользовательский элемент </strong>.
+          </p>
 
         </section>
 </template>
@@ -85,10 +57,14 @@
 
 import Vue from 'vue';
 import Component from 'vue-class-component';
+import Gist from './Gist.vue';
 
-console.log(1111111111111111)
+
 
 @Component({
+  components: {
+    Gist
+  }
 })
 export default class Page extends Vue {
   propMessage: string
@@ -97,27 +73,30 @@ export default class Page extends Vue {
   // use prop values for initial data
   helloMsg: string = 'Hello, ' + this.propMessage
   // lifecycle hook
-  mounted () {
-      var doc = this.$refs.iframe['contentDocument'] || this.$refs.iframe['contentWindow'];
-
-      doc.open();
-      doc.write('<html><style>.gist-meta {display: none;} .gist {line-height: inherit !important; font-size: 14px !important;}</style><body><scr' + 'ipt type="text/javascript" src="https://gist.github.com/sumbad/84cb537ad664af6a299329c9c97960c3.js"></sc'+'ript></body></html>');
-      doc.close();
-
+  mounted() {
   }
   // computed
-  get computedMsg () {
+  get computedMsg() {
     return 'computed ' + this.msg
   }
   // method
-  greet () {
+  greet() {
     alert('greeting: ' + this.msg)
   }
 }
 
+
 </script>
 
 <style lang="scss">
+  strong, b {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  a {
+    font-weight: bold;
+  }
 // .gist-meta {
 //   display: none;
 // }
@@ -144,7 +123,7 @@ export default class Page extends Vue {
 //   margin: 0 10px;
 // }
 
-a {
-  color: #42b983;
-}
+// a {
+//   color: #42b983;
+// }
 </style>

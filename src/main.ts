@@ -24,4 +24,12 @@ var root = new Vue({
 
 document.addEventListener('DOMContentLoaded', function () {
   root.$mount('#page')
-})
+});
+
+window['adjustIframeSize'] = function adjustIframeSize(iframeId:string, newHeight: any) {
+	var i = document.getElementById(iframeId);
+  console.log(iframeId, i)
+  if(i){
+    i.style.height = parseInt(newHeight) + "px";
+  }
+}
