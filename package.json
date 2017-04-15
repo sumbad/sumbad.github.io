@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "typescript": "^2.3.0",
-    "vue": "^2.2.1"
+    "vue": "^2.2.1",
+    "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
     "awesome-typescript-loader": "^3.1.2",
