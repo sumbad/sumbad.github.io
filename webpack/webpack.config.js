@@ -40,7 +40,12 @@ let PREBUILD_CFG = {
         from: helper.PATHS.src + '/public',
         to: path.join(helper.PATHS.build, helper.PATHS.outputPath),
         toType: 'dir'
-      }
+      },
+      // {
+      //   from: helper.PATHS.src + '/articles',
+      //   to: path.join(helper.PATHS.build, helper.PATHS.outputPath),
+      //   toType: 'dir'
+      // }
     ]),
   ]
 }

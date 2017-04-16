@@ -16,7 +16,7 @@ module.exports = function (helper) {
       port: 3000,
       // stats: 'minimal',
       // outputPath: helper.PATHS.build,
-      noInfo: true
+      // noInfo: true
       // historyApiFallback: true,
       // noInfo: true,
       // hot: true,

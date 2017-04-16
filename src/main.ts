@@ -1,27 +1,29 @@
-// import Vue from 'vue'
-// import App from './App.vue'
+import './polyfills';
 
-// new Vue({
-//   el: '#app',
-//   render: h => h(App)
-// })
-
-// console.log(2222222222222222222222)
-
+import './main.scss';
+import './public/font-awesome/scss/font-awesome.scss';
 
 import Vue from 'vue';
-import Page from './Page.vue';
+import VueRouter from 'vue-router';
+import App from './app/App.vue';
+
+import routes from './routes';
 
 
-// mount
-var root = new Vue({
-  el: '#page',
-  render: h => h(Page, {
-    props: { propMessage: 'World' }
-  })
+
+Vue.use(VueRouter);
+
+const router = new VueRouter({
+  routes,
+  mode: 'history',
+})
+
+var app = new Vue({
+  router,
+  el: '#app',
+  render: h => h(App)
 });
 
-
 document.addEventListener('DOMContentLoaded', function () {
-  root.$mount('#page')
+  app.$mount('#app')
 });

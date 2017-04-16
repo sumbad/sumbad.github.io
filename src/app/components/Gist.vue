@@ -14,11 +14,11 @@ import Component from 'vue-class-component';
 
 @Component({
   props: {
-    iframeId: String
+    iframeid: String
   }
 })
 export default class Gist extends Vue {
-  iframeId: string;
+  iframeid: string;
   
   mounted () {
       let doc = this.$el['contentDocument'] || this.$el['contentWindow'];
@@ -37,7 +37,7 @@ export default class Gist extends Vue {
         </style>
         <body>
           <link rel="stylesheet" href="https://assets-cdn.github.com/assets/gist-embed-9f0a4ad9c85ca776e669003688baa9d55f9db315562ce4d231d37dab2714c70a.css">
-          <scr`+`ipt type="text/javascript" src="https://gist.github.com/sumbad/${this.iframeId}.js"></sc`+`ript>
+          <scr`+`ipt type="text/javascript" src="https://gist.github.com/sumbad/${this.iframeid}.js"></sc`+`ript>
         </body>
       </html>`);
       doc.close();
