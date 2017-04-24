@@ -11,7 +11,7 @@
   import Vue from 'vue';
   import Component from 'vue-class-component';
   import ArticlePreview from './ArticlePreview';
-  import articles from '../../articles/articles';
+  import articles from '../../data/articles/articles';
 
 
   @Component({

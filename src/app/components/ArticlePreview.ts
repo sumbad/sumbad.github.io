@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
 
-import articles from '../../articles/articles';
+import articles from '../../data/articles/articles';
 
 
 

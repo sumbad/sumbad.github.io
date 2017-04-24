@@ -19,9 +19,9 @@
     "baseUrl": "./"
   },
   // "include": [
-    // "src/views/**/*",
-    // "./src/typings/**/*",
-    // "./**/*"
+  // "src/views/**/*",
+  // "./src/typings/**/*",
+  // "./**/*"
   // ],
   // "exclude": [
   //   "node_modules"

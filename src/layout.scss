@@ -33,11 +33,14 @@ body {
 .entry h2,
 .entry h2 a {
 	font: 31px/36px 'opensans-semibold', sans-serif;
-	color: #444;
 	margin-bottom: 0;
 	letter-spacing: -.5px;
 }
-.page h2 { margin-bottom: 18px; }
+.page h2, 
+.entry h2 { 
+  color: #444;
+  margin-bottom: 18px; 
+}
 
 
 /* b. Header Styles
