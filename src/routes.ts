@@ -1,5 +1,5 @@
 import Article from './app/components/Article';
-import Index from './app/components/Index.vue';
+import Index from './app/components/index/Index.vue';
 
 
 
