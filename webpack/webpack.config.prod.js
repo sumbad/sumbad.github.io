@@ -12,7 +12,7 @@ module.exports = function (helper) {
         // Absolute path to compiled SPA
         path.join(helper.PATHS.build),
         // List of routes to prerender
-        ['/', '/vue-web-components', '/webcomponents-introduction']
+        ['/', '/vue-web-components', '/webcomponents-introduction', '/webcomponents-base']
       ),
       new webpack.DefinePlugin({
         'process.env': {

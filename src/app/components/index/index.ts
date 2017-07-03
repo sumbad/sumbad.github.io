@@ -12,6 +12,6 @@ import articles from '../../../data/articles/articles';
 })
 export default class Index extends Vue {
   listArticles = articles.sort((a, b) => {
-    return (b.datePublished.getDate() - a.datePublished.getDate());
+    return (b.datePublished.getTime() - a.datePublished.getTime());
   });
 }
