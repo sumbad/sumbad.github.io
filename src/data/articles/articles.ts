@@ -16,5 +16,11 @@ export default [
         template: require('./webcomponents-base/template.htm'),
         preview: require('./webcomponents-base/preview.htm'),
         datePublished: new Date('2017-07-03')
+    },
+    {
+        name: 'webcomponents-principles',
+        template: require('./webcomponents-principles/template.htm'),
+        preview: require('./webcomponents-principles/preview.htm'),
+        datePublished: new Date('2017-08-03')
     }
 ];
