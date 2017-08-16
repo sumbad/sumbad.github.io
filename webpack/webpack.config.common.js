@@ -12,7 +12,7 @@ const extractSass = new ExtractTextPlugin({
 module.exports = function (helper) {
   return {
     entry: {
-      'app': path.resolve(helper.PATHS.src, 'main.ts')
+      'app': path.resolve(helper.PATHS.src, 'main.tsx')
     },
     output: {
       path: helper.PATHS.build,
@@ -22,29 +22,29 @@ module.exports = function (helper) {
     module: {
       rules: [
         {
-          test: /\.ts$/,
-          exclude: /node_modules|vue\/src/,
+          test: /\.ts(x?)$/,
+          // exclude: /node_modules|vue\/src/,
           loader: 'ts-loader',
-          options: {
-            appendTsSuffixTo: [/\.vue$/]
-          }
+          // options: {
+          //   appendTsSuffixTo: [/\.vue$/]
+          // }
         },
-        {
-          test: /\.vue$/,
-          loader: 'vue-loader',
-          options: {
-            loaders: {
-              ts: 'ts-loader',
-              // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
-              // the "scss" and "sass" values for the lang attribute to the right configs here.
-              // other preprocessors should work out of the box, no loader config like this necessary.
-              'scss': 'vue-style-loader!css-loader!sass-loader',
-              'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
-            },
-            esModule: true,
-            // other vue-loader options go here
-          }
-        },
+        // {
+        //   test: /\.vue$/,
+        //   loader: 'vue-loader',
+        //   options: {
+        //     loaders: {
+        //       ts: 'ts-loader',
+        //       // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
+        //       // the "scss" and "sass" values for the lang attribute to the right configs here.
+        //       // other preprocessors should work out of the box, no loader config like this necessary.
+        //       'scss': 'vue-style-loader!css-loader!sass-loader',
+        //       'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
+        //     },
+        //     esModule: true,
+        //     // other vue-loader options go here
+        //   }
+        // },
         {
           test: /\.js$/,
           loader: 'babel-loader',
@@ -84,9 +84,9 @@ module.exports = function (helper) {
       ]
     },
     resolve: {
-      alias: { 'vue$': 'vue/dist/vue.esm.js' },
+      // alias: { 'vue$': 'vue/dist/vue.esm.js' },
       modules: [helper.PATHS.src, helper.PATHS.node_modules],
-      extensions: ['.ts', '.js', '.vue', '.json']
+      extensions: ['.ts', '.js', '.json']
     },
     plugins: [
       extractSass

@@ -16,7 +16,9 @@
     "suppressImplicitAnyIndexErrors": true,
     "allowSyntheticDefaultImports": true,
     "rootDir": "./",
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "jsx": "react",
+    "jsxFactory": "h"
   },
   // "include": [
   // "src/views/**/*",
