@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
+    "hyperhtml": "^1.2.0",
     "typescript": "^2.3.0",
     "vue": "^2.2.1",
     "vue-router": "^2.4.0",
