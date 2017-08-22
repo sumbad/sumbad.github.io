@@ -78,9 +78,25 @@ module.exports = function (helper) {
           })
         },
         {
-          test: /\.(html|htm)$/,
-          loader: 'html-loader'
+          test: /\.js.html?$/,
+          use: [
+            {
+              loader: 'babel-loader'
+            },
+            {
+              loader: 'template-literals-loader'
+            },
+          ]
+          // loader: 'template-string-loader',
         },
+        // {
+        //   test: /\.(html|htm)$/,
+        //   loader: 'html-loader',
+        // },
+        // {
+        //   test: /\.js.html?$/,
+        //   loader: 'hyperhtml-loader',
+        // },
       ]
     },
     resolve: {
